@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main>
+  {{ with .Site.GetPage "/home" }}
+  <div class="section hero">
+    <h1>
+      {{ .Title | markdownify }}
+    </h1>
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ with .Site.GetPage "/home" }}
+  {{ $home := . }}
+  {{ $pages := .Resources.ByType "page" }}
+  {{ $pages := where $pages "Draft" false }}
+  <!-- Render all pages in /home as sections -->
+  {{ range sort $pages "Params.weight" }}
+  <section class="section" id="{{ .File.TranslationBaseName }}">
+    {{ partial "anchored-heading.html" (dict "Level" 2 "Text" (.Title | markdownify)) }}
+    {{ .Content }}
+  </section>
+  {{ end }}
+  {{ end }}
+</main>
+{{ end }}

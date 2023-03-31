@@ -1,0 +1,65 @@
+{{- /* AVIF/WebP logic from https://pawelgrzybek.com/webp-and-avif-images-on-a-hugo-website/ */ -}}
+
+{{- $width := 0 }}
+{{- $height := 0 }}
+{{- $u := urls.Parse .Destination }}
+{{- $u_path := $u.Path }}
+
+{{- with $u.Query }}
+{{- with .Get "height" }}
+{{- $height = int . }}
+{{- end }}
+{{- with .Get "width" }}
+{{- $width = int . }}
+{{- end }}
+{{ end }}
+
+<picture>
+  {{ $isJPG := eq (path.Ext $u_path) ".jpg" }}
+  {{ $isPNG := eq (path.Ext $u_path) ".png" }}
+
+  {{ if ($isJPG) -}}
+  {{ $avifPath := replace $u_path ".jpg" ".avif" }}
+  {{ $avifPathStatic := printf "static/%s" $avifPath }}
+
+  {{ if (fileExists $avifPathStatic) -}}
+  <source srcset="{{ $avifPath | safeURL }}" type="image/avif">
+  {{- end }}
+
+  {{ $webpPath := replace $u_path ".jpg" ".webp" }}
+  {{ $webpPathStatic := printf "static/%s" $webpPath }}
+
+  {{ if (fileExists $webpPathStatic) -}}
+  <source srcset="{{ $webpPath | safeURL }}" type="image/webp">
+  {{- end }}
+  {{- end }}
+
+  {{ if ($isPNG) -}}
+  {{ $avifPath := replace $u_path ".png" ".avif" }}
+  {{ $avifPathStatic := printf "static/%s" $avifPath }}
+
+  {{ if (fileExists $avifPathStatic) -}}
+  <source srcset="{{ $avifPath | safeURL }}" type="image/avif">
+  {{- end }}
+
+  {{ $webpPath := replace $u_path ".png" ".webp" }}
+  {{ $webpPathStatic := printf "static/%s" $webpPath }}
+
+  {{ if (fileExists $webpPathStatic) -}}
+  <source srcset="{{ $webpPath | safeURL }}" type="image/webp">
+  {{- end }}
+  {{- end }}
+
+  {{- if and $width $height }}
+  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
+    height="{{ $height }}" width="{{ $width }}" />
+  {{- else if and $width (not $height) }}
+  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
+    width="{{ $width }}" />
+  {{- else if and $height (not $width) }}
+  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
+    height="{{ $height }}" />
+  {{- else }}
+  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+  {{- end }}
+</picture>

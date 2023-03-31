@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default " en-us" }}">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
+    {{- .Summary | default (printf " %s - %s" .Title site.Title) }}{{- else }} {{- with site.Params.description }}{{ .
+    }}{{- end }}{{- end }}{{- end -}}">
+  {{- if or .Params.author site.Params.author }}
+  <meta name="author" content="{{ .Params.author | default site.Params.author }}">
+  {{ end }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ with .OutputFormats.Get "RSS" -}}
+  {{ printf `
+  <link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+  {{- end }}
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="{{ .Site.Params.colorLight }}" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="{{ .Site.Params.colorDark }}" />
+  <meta name="msapplication-TileColor" content="{{ .Site.Params.colorLight }}" />
+  <link rel="icon" sizes="any" href="/favicon.ico" />
+  <link rel="icon" sizes="any" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ .Site.Params.colorLightAccent }}">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  {{ $manifest := resources.Get "site.webmanifest" | resources.ExecuteAsTemplate "site.webmanifest" . }}
+  <link rel="manifest" href='{{ $manifest.RelPermalink }}' />
+  {{ $templ_styles := resources.Get "tstyle.css" }}
+  {{ $verb_styles := resources.Get "style.css" }}
+  {{ $styles := slice $verb_styles $templ_styles | resources.Concat "s.css" | resources.ExecuteAsTemplate "s.css" . |
+  toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ template "_internal/opengraph.html" . }}
+</head>
+
+<body>
+  <!--
+      to make a multi-page site, modify header.html to create
+      a proper header, then uncomment below to include it:
+      {{ partial "header" . }}
+    -->
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer" . }}
+</body>
+
+</html>

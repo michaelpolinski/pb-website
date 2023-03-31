@@ -1,0 +1,13 @@
+baseURL = 'https://michaelpolinski.com/pb-website/'
+languageCode = 'en-us'
+title = 'The Privacy Backplane Project'
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+repoURL = 'https://github.com/michaelpolinski/pb-website'
+description = 'Privacy Backplane: exploring a legal-technical framework for individualized privacy policies in IoT environments'
+colorDark = '#121212'
+colorLight = '#ededed'
+colorDarkAccent = '#8cc7f9'
+colorLightAccent = '#016bc6'
+images = ['android-chrome-512x512.png']
