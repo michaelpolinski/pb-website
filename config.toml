@@ -1,4 +1,3 @@
-baseURL = 'https://michaelpolinski.com/pb-website/'
 languageCode = 'en-us'
 title = 'The Privacy Backplane Project'
 disableKinds = ["taxonomy", "taxonomyTerm"]
