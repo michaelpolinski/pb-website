@@ -2,6 +2,7 @@
 
 {{- $width := 0 }}
 {{- $height := 0 }}
+{{- $invertDark := 0 }}
 {{- $u := urls.Parse .Destination }}
 {{- $u_path := $u.Path }}
 
@@ -11,6 +12,9 @@
 {{- end }}
 {{- with .Get "width" }}
 {{- $width = int . }}
+{{- end }}
+{{- with .Get "invertDark" }}
+{{- $invertDark = int . }}
 {{- end }}
 {{ end }}
 
@@ -52,14 +56,15 @@
 
   {{- if and $width $height }}
   <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
-    height="{{ $height }}" width="{{ $width }}" />
+    height="{{ $height }}" width="{{ $width }}" {{ if $invertDark }}class="invert-dark" {{ end }} />
   {{- else if and $width (not $height) }}
-  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
-    width="{{ $width }}" />
+  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} width="{{ $width }}"
+    {{ if $invertDark }}class="invert-dark" {{ end }} />
   {{- else if and $height (not $width) }}
   <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
-    height="{{ $height }}" />
+    height="{{ $height }}" {{ if $invertDark }}class="invert-dark" {{ end }} />
   {{- else }}
-  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+  <img src="{{ $u.Path | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} {{ if $invertDark
+    }}class="invert-dark" {{ end }} />
   {{- end }}
 </picture>
