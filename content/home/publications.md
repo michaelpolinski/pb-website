@@ -9,7 +9,7 @@ F. Doku, E. Fabian, N. Gordon, P.i Liu,
 M.  Polinski, M. Suresh, C. Surmeier, N. Wanninger,
 A Case for a User-centered Distributed 
 Privacy Backplane for the Internet of Things, Northwestern University Technical
-  Report NU-CS-2023-09.   \[[paper](papers/NU-CS-2023-09.pdf)\]
+  Report NU-CS-2023-09.   \[[paper](papers/NU-CS-2023-09.pdf), [poster](papers/GCASR23_Poster_PrivacyBackplane.pdf)\]
 
 
 
