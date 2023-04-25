@@ -22,4 +22,4 @@ weight: 20
 - Friedrich Doku (University of Pittsburgh)
 - Elena Fabian (Northwestern University)
 - Peizhi Liu (Northwestern University)
-- Carson Surmeier (Northwestern University)
+- [Carson Surmeier](https://about.surmeier.us) (Northwestern University)
