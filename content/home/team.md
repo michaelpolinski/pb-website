@@ -23,3 +23,4 @@ weight: 20
 - Elena Fabian (Northwestern University)
 - Peizhi Liu (Northwestern University)
 - [Carson Surmeier](https://about.surmeier.us) (Northwestern University)
+- Kris Yun (Northwestern University)
