@@ -7,7 +7,7 @@ weight: 20
 - Z. Lin, Z. Yu, Z. Guo, S. Campanoni, P. Dinda, X. Xing,
 CAMP: Compiler and Allocator-based Heap Memory Protection,
 Proceedings of the 33rd USENIX Security Symposium (USENIX Security 2024),
-August, 2024, to appear.
+August, 2024.
 \[[paper](papers/CAMP.pdf)\]
 
 - T. Filipiuk, N. Wanninger, N. Dhiantravan, C. Surmeier, A. Bernat, P. Dinda,
