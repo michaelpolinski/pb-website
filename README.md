@@ -13,8 +13,10 @@
 
 ### Development
 
-- This site is built with [Hugo](https://gohugo.io/). Use `hugo server` to run the development server. Use `hugo` to render the complete site with a root of `./public/` (this should be done automatically by CI).
+- This site is built with [Hugo](https://gohugo.io/). Use `hugo server` to run the development server.
+- You can also use `hugo` to compile the complete site with a root of `./public/`. You don't need to do this; `public/` will be built automatically by CI.
 - Content lives in `content/`. Specifically, files in `content/home/` are rendered as sections of the home page. Edit directly. Create a new section called NAME with `hugo new home/NAME.{md,html}`, then edit `content/home/NAME.{md,html}`. The parameter `weight` in the frontmatter controls the section order. 
+- The GitHub Actions workflow (`.github/workflows/hugo.yaml`) used to build the site in CI with Hugo will need eventual updates. Refer to [Hugo's documentation for this](https://gohugo.io/host-and-deploy/host-on-github-pages/).
 
 ### Images
 
