@@ -13,7 +13,7 @@ weight: 20
 
 ### Graduate Students
 
-- Nick Gordon (Ph.D. Student, University of Pittsburgh)
+- [Nick Gordon](https://scholar.google.com/citations?user=LDGdNIAAAAAJ&hl=en)  (Ph.D. Student, University of Pittsburgh)
 - [Michael Polinski](https://michaelpolinski.com/) (Ph.D. Student, Northwestern University)
 - [Friedrich Doku](https://fdoku.me/) (Ph.D. Student, Northwestern University)
 - [Madhav Suresh](https://users.cs.northwestern.edu/~mas384/)  (Ph.D. Student, Northwestern University)
