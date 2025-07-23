@@ -10,7 +10,7 @@ Proceedings of the 33rd USENIX Security Symposium (USENIX Security 2024),
 August, 2024.
 \[[paper](papers/CAMP.pdf)\]
 
-- N. Gordon, Secure I/O on Trusted Platforms with Lightweight Kernels, Doctoral Disseration, Department of Computer Science, University of Pittsburgh, August, 2024.   \\[dissertation](papers/gordon-diss.pdf)\]
+- N. Gordon, Secure I/O on Trusted Platforms with Lightweight Kernels, Doctoral Disseration, Department of Computer Science, University of Pittsburgh, August, 2024.   \[[dissertation](papers/gordon-diss.pdf)\]
 
 - T. Filipiuk, N. Wanninger, N. Dhiantravan, C. Surmeier, A. Bernat, P. Dinda,
 CARAT KOP: Towards Protecting the Core HPC Kernel from Linux Kernel Modules,
