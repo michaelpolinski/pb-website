@@ -22,7 +22,7 @@ Proceedings of the 13th International Workshop on Runtime and Operating Systems 
 November, 2023.
 \[[paper](papers/ross23.pdf)\]
 
-- J. Lange, P. Dinda, R. Dick, F. Doku, E. Fabian, N. Gordon, P.i Liu, M. Polinski, M. Suresh, C. Surmeier, N. Wanninger,
+- J. Lange, P. Dinda, R. Dick, F. Doku, E. Fabian, N. Gordon, P. Liu, M. Polinski, M. Suresh, C. Surmeier, N. Wanninger,
 A Case for a User-centered Distributed Privacy Backplane for the Internet of Things,
 Northwestern University Technical Report NU-CS-2023-09.
 \[[paper](papers/NU-CS-2023-09.pdf), [poster](papers/GCASR23_Poster_PrivacyBackplane.pdf)\]
