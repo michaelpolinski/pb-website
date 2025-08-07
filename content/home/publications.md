@@ -4,6 +4,10 @@ draft: false
 weight: 20
 ---
 
+- H. Qiao, V. Srinivas, P. Dinda, R. Dick, Redaction at the Edge: Efficient Human Motion Tracking for Privacy Protection, ESWEEK 2025, September-October, 2025.
+
+- M. Polinksi, R. Jo, K. McAfee, F. Bustamante, The Centralization of a Decentralized Video Platform - A First Characterization of PeerTube, ACM SIGCOMM Computer Communication Review, Volume 54, Number 4.  February, 2025. 
+
 - Z. Lin, Z. Yu, Z. Guo, S. Campanoni, P. Dinda, X. Xing,
 CAMP: Compiler and Allocator-based Heap Memory Protection,
 Proceedings of the 33rd USENIX Security Symposium (USENIX Security 2024),
