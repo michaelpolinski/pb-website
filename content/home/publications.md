@@ -4,6 +4,8 @@ draft: false
 weight: 20
 ---
 
+- F. Doku, P. Dinda, TRUSTCHECKPOINTS: Time Betrays Malware for Unconditional Software Root of Trust, Northwestern University Technical Report NU-CS-2025-37. \[[paper](papers/tc_nu_report.pdf)\]
+
 - H. Qiao, V. Srinivas, P. Dinda, R. Dick, Redaction at the Edge: Efficient Human Motion Tracking for Privacy Protection, Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis (CODES-ISSS 2025), October, 2025.
 
 - M. Polinksi, R. Jo, K. McAfee, F. Bustamante, The Centralization of a Decentralized Video Platform - A First Characterization of PeerTube, ACM SIGCOMM Computer Communication Review, Volume 54, Number 4.  February, 2025. 
