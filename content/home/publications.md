@@ -4,11 +4,20 @@ draft: false
 weight: 20
 ---
 
-- F. Doku, P. Dinda, TRUSTCHECKPOINTS: Time Betrays Malware for Unconditional Software Root of Trust, Northwestern University Technical Report NU-CS-2025-37. \[[paper](papers/tc_nu_report.pdf)\]
+- F. Doku, P. Dinda,
+TRUSTCHECKPOINTS: Time Betrays Malware for Unconditional Software Root of Trust,
+Northwestern University Technical Report NU-CS-2025-37.
+\[[paper](papers/tc_nu_report.pdf)\]
 
-- H. Qiao, V. Srinivas, P. Dinda, R. Dick, Redaction at the Edge: Efficient Human Motion Tracking for Privacy Protection, Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis (CODES-ISSS 2025), October, 2025.
+- H. Qiao, V. Srinivas, P. Dinda, R. Dick,
+Redaction at the Edge: Efficient Human Motion Tracking for Privacy Protection,
+Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis (CODES-ISSS 2025),
+October, 2025.
 
-- M. Polinski, R. Jo, K. McAfee, F. Bustamante, The Centralization of a Decentralized Video Platform - A First Characterization of PeerTube, ACM SIGCOMM Computer Communication Review, Volume 54, Number 4.  February, 2025.
+- M. Polinski, R. Jo, K. McAfee, F. Bustamante,
+The Centralization of a Decentralized Video Platform - A First Characterization of PeerTube,
+ACM SIGCOMM Computer Communication Review, Volume 54, Number 4,
+February, 2025.
 
 - Z. Lin, Z. Yu, Z. Guo, S. Campanoni, P. Dinda, X. Xing,
 CAMP: Compiler and Allocator-based Heap Memory Protection,
@@ -16,7 +25,11 @@ Proceedings of the 33rd USENIX Security Symposium (USENIX Security 2024),
 August, 2024.
 \[[paper](papers/CAMP.pdf)\]
 
-- N. Gordon, Secure I/O on Trusted Platforms with Lightweight Kernels, Doctoral Disseration, Department of Computer Science, University of Pittsburgh, August, 2024.   \[[dissertation](papers/gordon-diss.pdf)\]
+- N. Gordon,
+Secure I/O on Trusted Platforms with Lightweight Kernels,
+Doctoral Disseration, Department of Computer Science, University of Pittsburgh,
+August, 2024.
+\[[dissertation](papers/gordon-diss.pdf)\]
 
 - T. Filipiuk, N. Wanninger, N. Dhiantravan, C. Surmeier, A. Bernat, P. Dinda,
 CARAT KOP: Towards Protecting the Core HPC Kernel from Linux Kernel Modules,
